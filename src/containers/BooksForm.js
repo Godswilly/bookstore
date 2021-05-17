@@ -15,25 +15,30 @@ const CATEGORIES = [
 function BooksForm() {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('Action');
 
   return (
     <div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          dispatch(addBook(title, category));
+          if (title && category) {
+            dispatch(addBook(title, category));
+            setTitle('');
+            setCategory('');
+            e.target.reset();
+          }
         }}
       >
         <input
           onChange={(title) => setTitle(title.target.value)}
           type="text"
-          placeholder="Title"
+          placeholder="Title" required
         />
 
         <select
           onChange={(category) => setCategory(category.target.value)}
-          name="category"
+          name="category" required
         >
           <option disabled value>
             Select a category
