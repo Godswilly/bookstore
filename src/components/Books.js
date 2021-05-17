@@ -8,8 +8,8 @@ function Book({ book }) {
       <td>{book.title}</td>
       <td>{book.category}</td>
     </tr>
-  )
-};
+  );
+}
 
 Book.propTypes = {
   book: PropTypes.shape({
@@ -20,9 +20,9 @@ Book.propTypes = {
 };
 
 Book.defaultProps = {
-  book: { 
-    id: 1, 
-    title: '', 
+  book: {
+    id: 1,
+    title: '',
     category: '',
   },
 };
