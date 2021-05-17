@@ -22,19 +22,19 @@ function BooksForm() {
     if (event.target.name === 'category') setCategory(event.target.value);
   };
 
+
+  const handleSubmit= (event) => {
+    event.preventDefault();
+    if (title && category) {
+      dispatch(addBook(title, category));
+      setTitle('');
+      setCategory('Action');
+      event.target.reset();
+    }
+  }
   return (
     <div>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (title && category) {
-            dispatch(addBook(title, category));
-            setTitle('');
-            setCategory('Action');
-            e.target.reset();
-          }
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         <input type="text" name="title" onChange={handleChange}
           placeholder="Title" required
         />
