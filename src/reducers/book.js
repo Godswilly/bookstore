@@ -1,4 +1,4 @@
-import { ADD_BOOK } from '../actions/index.js';
+import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index.js';
 
 const initialState = [
   {
@@ -15,7 +15,7 @@ const initialState = [
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_BOOK:
+    case CREATE_BOOK:
       return [
         ...state,
         {
@@ -24,8 +24,12 @@ const bookReducer = (state = initialState, action) => {
           category: action.payload.category,
         },
       ];
-      default:
-        return state;
+
+    case REMOVE_BOOK:
+      return state.filter(book => book.id !== action.payload.id);
+
+    default:
+      return state;
   }
 };
 
