@@ -22,8 +22,7 @@ function BooksForm() {
     if (event.target.name === 'category') setCategory(event.target.value);
   };
 
-
-  const handleSubmit= (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (title && category) {
       dispatch(addBook(title, category));
@@ -31,17 +30,23 @@ function BooksForm() {
       setCategory('Action');
       event.target.reset();
     }
-  }
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" name="title" onChange={handleChange}
-          placeholder="Title" required
+        <input
+          type="text"
+          name="title"
+          onChange={handleChange}
+          placeholder="Title"
+          required
         />
 
         <select
           onChange={handleChange}
-          name="category" required
+          name="category"
+          required
         >
           <option disabled value>
             Select a category
