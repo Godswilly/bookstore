@@ -1,8 +1,19 @@
-import { combineReducers } from 'redux';
-import bookReducer from './books';
+import { createStore } from 'redux';
+import rootReducer from './rootReducer';
 
-const rootReducer = combineReducers({
-  book: bookReducer,
-});
+const initialState = [
+  {
+    id: 1,
+    title: 'DNA',
+    category: 'Genetics',
+  },
+  {
+    id: 2,
+    title: 'RNA',
+    category: 'Biotechnology',
+  },
+];
 
-export default rootReducer;
+const store = createStore(rootReducer, initialState);
+
+export default store;

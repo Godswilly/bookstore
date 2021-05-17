@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../actions/book';
 
 const CATEGORIES = [
   'Action',
@@ -11,14 +13,29 @@ const CATEGORIES = [
 ];
 
 function BooksForm() {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('');
+
   return (
     <div>
-      <h2>Books Form</h2>
-      <form>
-        <input type="text" placeholder="Title" />
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          dispatch(addBook(title, category));
+        }}
+      >
+        <input
+          onChange={title => setTitle(title.target.value)}
+          type="text"
+          placeholder="Title"
+        />
 
-        <select name="category">
-          <option disabled selected value>
+        <select
+          onChange={category => setCategory(category.target.value)}
+          name="category"
+        >
+          <option disabled value>
             Select a category
           </option>
           {CATEGORIES.map(category => (
