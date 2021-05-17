@@ -6,6 +6,11 @@ const initialState = [
     title: 'DNA',
     category: 'Genetics',
   },
+  {
+    id: 2,
+    title: 'RNA',
+    category: 'Biotechnology',
+  },
 ];
 
 const bookReducer = (state = initialState, action) => {
