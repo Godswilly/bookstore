@@ -14,6 +14,6 @@ const initialState = [
   },
 ];
 
-const store = createStore(rootReducer, initialState);
+const store = createStore(rootReducer, { book: initialState });
 
 export default store;
