@@ -1,12 +1,16 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../actions/books';
+import { removeBook, changeFilter } from '../actions/books';
 import Book from '../components/Books';
 
 function BooksList() {
   const allBooks = useSelector((state) => state.book);
   const dispatch = useDispatch();
   const handleRemoveBook = (id) => dispatch(removeBook(id));
+
+  const handleFilterChange = (event) => {
+    dispatch(changeFilter(event.target.value));
+  };
   return (
     <div>
       <h2>Books List</h2>
@@ -25,6 +29,7 @@ function BooksList() {
           ))}
         </tbody>
       </table>
+      <CategoryFilter handleFilterChange={handleFilterChange} />
     </div>
   );
 }
