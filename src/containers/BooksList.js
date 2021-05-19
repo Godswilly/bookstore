@@ -4,19 +4,21 @@ import { removeBook, changeFilter } from '../actions/books';
 import Book from '../components/Books';
 import CategoryFilter from '../components/CategoryFilter';
 
-function BooksList() {
-  const allBooks = useSelector((state) => state.book);
+const BooksList = () => {
   const dispatch = useDispatch();
+  const books = useSelector((state) => state.book);
+  const filter = useSelector((state) => state.filter);
   const handleRemoveBook = (id) => dispatch(removeBook(id));
 
   const handleFilterChange = (event) => {
     dispatch(changeFilter(event.target.value));
   };
 
-  const filterBooks = (allBooks) => (
-    filter === 'All' ? allBooks
-      : allBooks.filter((book) => book.category === filter)
+  const filterBooks = (books) => (
+    filter === 'All' ? books
+      : books.filter((book) => book.category === filter)
   );
+
   return (
     <div>
       <h2>Books List</h2>
@@ -30,7 +32,7 @@ function BooksList() {
           </tr>
         </thead>
         <tbody>
-        { filterBooks(allBooks)
+          { filterBooks(books)
             .map((book) => (
               <Book
                 key={book.id}
@@ -43,5 +45,6 @@ function BooksList() {
       <CategoryFilter handleFilterChange={handleFilterChange} />
     </div>
   );
-}
+};
+
 export default BooksList;

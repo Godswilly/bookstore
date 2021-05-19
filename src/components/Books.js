@@ -7,7 +7,11 @@ function Book({ book, handleRemoveBook }) {
       <td>{book.id}</td>
       <td>{book.title}</td>
       <td>{book.category}</td>
-      <td><button type="button" onClick={handleRemoveBook}>Remove book</button></td>
+      <td>
+        <button type="button" onClick={handleRemoveBook}>
+          Remove Book
+        </button>
+      </td>
     </tr>
   );
 }

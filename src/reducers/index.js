@@ -17,6 +17,6 @@ const initialState = {
   filter: 'All',
 };
 
-const store = createStore(rootReducer, { book: initialState });
+const store = createStore(rootReducer, initialState);
 
 export default store;

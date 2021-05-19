@@ -17,11 +17,6 @@ function BooksForm() {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('Action');
 
-  const handleChange = (event) => {
-    if (event.target.name === 'title') setTitle(event.target.value);
-    if (event.target.name === 'category') setCategory(event.target.value);
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     if (title && category) {
@@ -32,13 +27,18 @@ function BooksForm() {
     }
   };
 
+  const handleChange = (event) => {
+    if (event.target.name === 'title') setTitle(event.target.value);
+    if (event.target.name === 'category') setCategory(event.target.value);
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <input
-          type="text"
           name="title"
           onChange={handleChange}
+          type="text"
           placeholder="Title"
           required
         />
