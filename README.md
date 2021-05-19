@@ -11,7 +11,7 @@ This project was bootstrapped with Create React App.
 - CSS
 
 ## Live Demo
-[Live Demo]()
+[Live Demo](https://gallant-curie-eb53aa.netlify.app/)
 
 ## Getting Started 
 To get a local copy up and running, follow these simple example steps.
