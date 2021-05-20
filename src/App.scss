@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 @import './reset.css';
 
+
 html,
 body {
   box-sizing: border-box;
@@ -40,6 +41,17 @@ body {
     margin: 0 0 0 100px;
   }
 
+  span {
+    float: right;
+    margin-left: 28rem;
+    color: #0290ff;
+  }
+
+  &.content .count {
+    height: 30px;
+    width: 140px;
+  }
+
   h1,
   h2,
   h3 {
@@ -71,6 +83,7 @@ body {
 
   &.main {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 0 27px;
     height: 170px;
@@ -147,7 +160,6 @@ body {
     border-radius: 50%;
     width: 90px;
     height: 89.9px;
-    padding: 9.9px 10px 12px 12px;
   }
 
   &.oval {

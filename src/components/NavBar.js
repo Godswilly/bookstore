@@ -15,6 +15,7 @@ const NavBar = () => {
         <h3>BOOKS</h3>
         <h3>CATEGORIES</h3>
         <CategoryFilter handleFilterChange={handleFilterChange} />
+        <span><i className="fas fa-user-alt" /></span>
       </div>
     </div>
   );
