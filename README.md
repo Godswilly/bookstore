@@ -1,7 +1,7 @@
 # Bookstore App
 This project was bootstrapped with Create React App.
 
-![screenshot]
+![screenshot](Screenshotp.png)
 
 ## Built With
 - CSS
@@ -9,6 +9,7 @@ This project was bootstrapped with Create React App.
 - React
 - Redux
 - CSS
+- Scss
 
 ## Live Demo
 [Live Demo](https://stoic-boyd-ceb2a7.netlify.app/)
