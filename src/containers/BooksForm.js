@@ -33,17 +33,19 @@ function BooksForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="books-form main">
+      <div className="books-form add-text ">ADD NEW BOOK</div>
+      <form onSubmit={handleSubmit} className="books-form form-main ">
         <input
           name="title"
           onChange={handleChange}
           type="text"
-          placeholder="Title"
+          placeholder="Book Title"
+          className="books-form input "
           required
         />
-
         <select
+          className="books-form select-category "
           onChange={handleChange}
           name="category"
           required
@@ -51,13 +53,15 @@ function BooksForm() {
           <option disabled value>
             Select a category
           </option>
-          {CATEGORIES.map((category) => (
+          {CATEGORIES.map(category => (
             <option key={category} value={category}>
               {category}
             </option>
           ))}
         </select>
-        <button type="submit">Add book</button>
+        <button type="submit" className="books-form add-book ">
+          ADD BOOK
+        </button>
       </form>
     </div>
   );
