@@ -8,7 +8,7 @@ function App() {
     <div className="app main">
       <NavBar />
       <BooksList />
-      <div className="app line"></div>
+      <div className="app line"> </div>
       <BooksForm />
     </div>
   );

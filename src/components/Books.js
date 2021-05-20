@@ -29,7 +29,7 @@ function Book({ book, handleRemoveBook }) {
       </div>
       <div className="book percent-container">
         <div className="book percent">
-        <div className="book oval"></div>
+          <div className="book oval"> </div>
         </div>
         <div className="book percent-subcontainer">
           <div className="book percent-info"> 64% </div>
@@ -39,8 +39,11 @@ function Book({ book, handleRemoveBook }) {
       <div className="book progress">
         <div className="book current-text">CURRENT CHAPTER</div>
         <div className="book current-chapter">Chapter 17</div>
-        <button type="button" className="book update-progress">
-        UPDATE PROGRESS
+        <button
+          type="button"
+          className="book update-progress"
+        >
+          UPDATE PROGRESS
         </button>
       </div>
     </div>

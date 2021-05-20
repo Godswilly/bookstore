@@ -17,7 +17,7 @@ const BooksList = () => {
   return (
     <div>
       <div>
-        {filterBooks(books).map(book => (
+        {filterBooks(books).map((book) => (
           <Book
             key={book.id}
             book={book}

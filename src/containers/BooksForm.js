@@ -53,7 +53,7 @@ function BooksForm() {
           <option disabled value>
             Select a category
           </option>
-          {CATEGORIES.map(category => (
+          {CATEGORIES.map((category) => (
             <option key={category} value={category}>
               {category}
             </option>
