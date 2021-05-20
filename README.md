@@ -12,7 +12,7 @@ This project was bootstrapped with Create React App.
 - Scss
 
 ## Live Demo
-[Live Demo](https://stoic-boyd-ceb2a7.netlify.app/)
+[Live Demo](https://fervent-lalande-63c43b.netlify.app/)
 
 ## Getting Started 
 To get a local copy up and running, follow these simple example steps.
