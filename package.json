@@ -12,6 +12,7 @@
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
     "redux": "^4.1.0",
+    "sass": "^1.32.13",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -43,6 +44,7 @@
     "@babel/eslint-parser": "^7.14.2",
     "@babel/plugin-syntax-jsx": "^7.12.13",
     "@babel/preset-react": "^7.13.13",
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.2",
